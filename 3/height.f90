@@ -1,44 +1,7 @@
 ! Computer Seminar II
+! Exercise 4.5
 ! Maximilian Fernaldy
 ! C2TB1702
-
-program height
-    use arithmetics
-    implicit none
-
-    real :: maleHeight(4) = [178.7, 165.6, 182.6, 169.3]
-    real :: femaleHeight(3) = [162.5, 168.3, 158.6]
-    real :: average
-    real :: maxVal
-    real :: minVal
-
-    print *, "Male average height:"
-    call avg(maleHeight, size(maleHeight), average)
-    print *, average
-
-    print *, "Male maximum height:"
-    call max(maleHeight, size(maleHeight), maxVal)
-    print *, maxVal
-
-    print *, "Male minimum height:"
-    call min(maleHeight, size(maleHeight), minVal)
-    print *, minVal
-
-    print *
-
-    print *, "Female average height:"
-    call avg(femaleHeight, size(femaleHeight), average)
-    print *, average
-
-    print *, "Female maximum height:"
-    call max(femaleHeight, size(femaleHeight), maxVal)
-    print *, maxVal
-
-    print *, "Female minimum height:"
-    call min(femaleHeight, size(femaleHeight), minVal)
-    print *, minVal
-end program height
-
 
 module arithmetics
 
@@ -88,3 +51,40 @@ module arithmetics
     end subroutine min
 
 end module arithmetics
+
+program height
+    use arithmetics
+    implicit none
+
+    real :: maleHeight(4) = [178.7, 165.6, 182.6, 169.3]
+    real :: femaleHeight(3) = [162.5, 168.3, 158.6]
+    real :: average
+    real :: maxVal
+    real :: minVal
+
+    print *, "Male average height:"
+    call avg(maleHeight, size(maleHeight), average)
+    print *, average
+
+    print *, "Male maximum height:"
+    call max(maleHeight, size(maleHeight), maxVal)
+    print *, maxVal
+
+    print *, "Male minimum height:"
+    call min(maleHeight, size(maleHeight), minVal)
+    print *, minVal
+
+    print *
+
+    print *, "Female average height:"
+    call avg(femaleHeight, size(femaleHeight), average)
+    print *, average
+
+    print *, "Female maximum height:"
+    call max(femaleHeight, size(femaleHeight), maxVal)
+    print *, maxVal
+
+    print *, "Female minimum height:"
+    call min(femaleHeight, size(femaleHeight), minVal)
+    print *, minVal
+end program height
